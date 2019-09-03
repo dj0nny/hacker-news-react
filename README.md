@@ -40,7 +40,9 @@ yarn start
 ## Todo
 
 - [x] Generate the React app using `create-react-app`
-- [ ] Clean up the folder, set up the store
+- [ ] Clean up the folder
+- [ ] Add router
+- [ ] Add and configure redux
 - [ ] Fetch the **news** from the API and create the components
 - [ ] Add pagination
 - [ ] Fetch the **news comments** from the API and create the components
