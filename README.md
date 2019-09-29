@@ -1,4 +1,8 @@
 # hacker-news-react
+
+[![Build Status](https://travis-ci.org/dj0nny/hacker-news-react.svg?branch=develop)](https://travis-ci.org/dj0nny/hacker-news-react)
+[![npm version](https://badge.fury.io/js/react.svg)](https://badge.fury.io/js/react)
+![GitHub top language](https://img.shields.io/github/languages/top/dj0nny/hacker-news-react)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/dj0nny/hacker-news-react#readme)
 
