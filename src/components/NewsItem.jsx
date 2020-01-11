@@ -6,7 +6,7 @@ const NewsItem = ({ item }) => {
     <div className="detail">
       <div className="news-detail">
         <div className="news-item">
-          <a href={item.url} target="_blank" className="title">{item.title}</a>
+          <a href={item.url} target="_blank" rel="noopener noreferrer" className="title">{item.title}</a>
           <span className="domain">({item.domain})</span>
           <div className="subtext">
             {item.points} points by {item.user} {item.time_ago} | <Link className="comment-link" to={'news/' + item.id}> {item.comments_count} comments </Link>

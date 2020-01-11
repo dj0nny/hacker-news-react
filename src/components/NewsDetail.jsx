@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import NewsItem from './NewsItem';
+import { getNewsDetail } from '../store/actions/newsAction';
 
-const NewsDetail = (props) => {
-  console.log(props);
-  return (
-    <div>
-      <NewsItem item={props.newsDetail[0]}/>
-      {props.newsDetail[0].id}
-    </div>
-  )
+class NewsDetail extends Component {
+  async componentDidMount() {
+    const { id } = this.props.match.params;
+    await this.props.getNewsDetails(id);
+  }
+
+  render() {
+    return (
+      <div>
+        <NewsItem item={this.props.newsDetail}/>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = (state) => {
   return {
-    newsDetail: state.newsDetails,
+    newsDetail: state.newsDetail,
   }
 }
 
-export default connect(mapStateToProps)(NewsDetail);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getNewsDetails: (id) => dispatch(getNewsDetail(id))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewsDetail);

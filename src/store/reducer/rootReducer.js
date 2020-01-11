@@ -10,6 +10,12 @@ const rootReducer = (state = initState, action) => {
       news: action.news,
     }
   }
+  if (action.type === 'GET_DETAILS') {
+    return {
+      ...state,
+      newsDetail: action.details
+    }
+  }
   return state;
 }
 

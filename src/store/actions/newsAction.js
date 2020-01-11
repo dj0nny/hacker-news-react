@@ -7,3 +7,14 @@ export const getNews = (newsType) => {
     })
   }
 }
+
+export const getNewsDetail = (newsId) => {
+  return (dispatch) => {
+    axios.get(`https://api.hackernews.io/item/${newsId}`).then((res) => {
+      dispatch({
+        type: 'GET_DETAILS',
+        details: res.data
+      })
+    })
+  }
+}
