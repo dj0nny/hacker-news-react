@@ -46,16 +46,16 @@ yarn start
 - [x] Generate the React app using `create-react-app`
 - [x] Clean up the folder
 - [x] Add router
-- [ ] Add and configure redux
-- [ ] Fetch the **news** from the API and create the components
+- [x] Add and configure redux
+- [x] Fetch the **news** from the API and create the components
 - [ ] Add pagination
 - [ ] Fetch the **news comments** from the API and create the components
-- [ ] Create the routes for the pages
-- [ ] Fetching from API and creating components for:
-  - [ ] newest
-  - [ ] ask
-  - [ ] show
-  - [ ] jobs
+- [x] Create the routes for the pages
+- [x] Fetching from API and creating components for:
+  - [x] newest
+  - [x] ask
+  - [x] show
+  - [x] jobs
 - [ ] Deploy on [Netlify](https://netlify.com)
 
 ## Author
