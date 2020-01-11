@@ -49,7 +49,7 @@ yarn start
 - [x] Add and configure redux
 - [x] Fetch the **news** from the API and create the components
 - [ ] Add pagination
-- [ ] Fetch the **news comments** from the API and create the components
+- [x] Fetch the **news comments** from the API and create the components
 - [x] Create the routes for the pages
 - [x] Fetching from API and creating components for:
   - [x] newest
