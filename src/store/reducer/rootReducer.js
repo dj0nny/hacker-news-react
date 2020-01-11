@@ -1,6 +1,7 @@
 const initState = {
   news: [],
-  newsDetail: []
+  newsDetail: [],
+  isLoading: false,
 }
 
 const rootReducer = (state = initState, action) => {
