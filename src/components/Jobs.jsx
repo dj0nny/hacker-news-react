@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import NewsItem from './NewsItem';
+import { getNews } from '../store/actions/newsAction';
 
 class Jobs extends Component {
+  async componentDidMount() {
+    await this.props.getNews('jobs');
+  }
+  
   render() {
     return (
       <div className="news-list-wrapper">
-        {/* {this.props.newsList.map((newsItem) => {
+        {this.props.newsList.map((newsItem) => {
           return (
             <NewsItem item={newsItem}></NewsItem>
           )
-        })} */}
-        jobs
+        })}
       </div>
     )
   }
@@ -23,5 +27,12 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getNews: (newsType) => dispatch(getNews(newsType)),
+  }
+}
 
-export default connect(mapStateToProps)(Jobs);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Jobs);

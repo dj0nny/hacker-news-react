@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import NewsItem from './NewsItem';
+import { getNews } from '../store/actions/newsAction';
 
 class News extends Component {
+  async componentDidMount() {
+    await this.props.getNews('news');
+  }
+
   render() {
     return (
       <div className="news-list-wrapper">
@@ -22,5 +27,10 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getNews: (newsType) => dispatch(getNews(newsType)),
+  }
+}
 
-export default connect(mapStateToProps)(News);
+export default connect(mapStateToProps, mapDispatchToProps)(News);

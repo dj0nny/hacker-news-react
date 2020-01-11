@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import NewsItem from './NewsItem';
+import { getNews } from '../store/actions/newsAction';
 
 class Show extends Component {
+  async componentDidMount() {
+    await this.props.getNews('show');
+  }
+
   render() {
     return (
       <div className="news-list-wrapper">
-        {/* {this.props.newsList.map((newsItem) => {
+        {this.props.newsList.map((newsItem) => {
           return (
             <NewsItem item={newsItem}></NewsItem>
           )
-        })} */}
-        show
+        })}
       </div>
     )
   }
@@ -23,5 +27,11 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getNews: (newsType) => dispatch(getNews(newsType)),
+  }
+}
 
-export default connect(mapStateToProps)(Show);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Show);
