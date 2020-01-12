@@ -9,15 +9,23 @@ class Newest extends Component {
   }
 
   render() {
-    return (
-      <div className="news-list-wrapper">
-        {this.props.newsList.map((newsItem) => {
-          return (
-            <NewsItem item={newsItem}></NewsItem>
-          )
-        })}
-      </div>
-    )
+    const { newsList } = this.props;
+
+    if (newsList) {
+      return (
+        <div className="news-list-wrapper">
+          {this.props.newsList.map((newsItem) => {
+            return (
+              <NewsItem item={newsItem}></NewsItem>
+            )
+          })}
+        </div>
+      )
+    } else {
+      return (
+        <div className="loading">Loading...</div>
+      )
+    }
   }
 }
 
