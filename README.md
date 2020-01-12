@@ -48,7 +48,7 @@ yarn start
 - [x] Add router
 - [x] Add and configure redux
 - [x] Fetch the **news** from the API and create the components
-- [ ] Add pagination
+- [x] Add pagination
 - [x] Fetch the **news comments** from the API and create the components
 - [x] Create the routes for the pages
 - [x] Fetching from API and creating components for:
