@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export const getNews = (newsType) => {
+export const getNews = (newsType, page) => {
   return (dispatch) => {
-    axios.get(`https://api.hackernews.io/${newsType}`).then((res) => {
+    axios.get(`https://api.hackernews.io/${newsType}?page=${page}`).then((res) => {
       dispatch({ type: 'GET_NEWS', news: res.data })
     })
   }

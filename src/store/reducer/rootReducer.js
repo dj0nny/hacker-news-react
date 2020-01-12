@@ -6,9 +6,18 @@ const initState = {
 
 const rootReducer = (state = initState, action) => {
   if (action.type === 'GET_NEWS') {
+     const uniqueNews = {};
+     let { news } = state;
+     news = news.concat(action.news).filter((item) => {
+       if (!uniqueNews[item.id]) {
+         uniqueNews[item.id] = true;
+         return true;
+       }
+       return false;
+     });
     return {
       ...state,
-      news: action.news,
+      news
     }
   }
   if (action.type === 'GET_DETAILS') {

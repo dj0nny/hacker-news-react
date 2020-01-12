@@ -121,3 +121,10 @@ span.comment-meta {
   margin-bottom: 0;
 }
 
+.more {
+  cursor: pointer;
+}
+
+.more:hover {
+  text-decoration: underline;
+}
