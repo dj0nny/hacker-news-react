@@ -26,6 +26,12 @@ const rootReducer = (state = initState, action) => {
       newsDetail: action.details
     }
   }
+  if (action.type === 'CLEAN_NEWS') {
+    return {
+      ...state,
+      news: []
+    }
+  }
   return state;
 }
 

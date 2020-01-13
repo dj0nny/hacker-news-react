@@ -17,11 +17,11 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={News} />
-            <Route path="/newest" component={Newest} />
-            <Route path="/ask" component={Ask} />
-            <Route path="/show" component={Show} />
-            <Route path="/jobs" component={Jobs} />
-            <Route path="/news/:id" component={NewsDetail} />
+            <Route exact path="/newest" component={Newest} />
+            <Route exact path="/ask" component={Ask} />
+            <Route exact path="/show" component={Show} />
+            <Route exact path="/jobs" component={Jobs} />
+            <Route exact path="/news/:id" component={NewsDetail} />
           </Switch>
         </div>
       </BrowserRouter>

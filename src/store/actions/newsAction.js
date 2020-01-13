@@ -18,3 +18,9 @@ export const getNewsDetail = (newsId) => {
     })
   }
 }
+
+export const cleanNews = () => {
+ return {
+    type: 'CLEAN_NEWS',
+  }
+}

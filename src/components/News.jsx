@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import NewsItem from './NewsItem';
-import { getNews } from '../store/actions/newsAction';
+import { getNews, cleanNews } from '../store/actions/newsAction';
 
 class News extends Component {
   state = {
@@ -9,6 +9,7 @@ class News extends Component {
   }
 
   async componentDidMount() {
+    await this.props.cleanNews();
     await this.props.getNews('news', 1);
   }
 
@@ -52,6 +53,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getNews: (newsType, page) => dispatch(getNews(newsType, page)),
+    cleanNews: () => dispatch(cleanNews()),
   }
 }
 
