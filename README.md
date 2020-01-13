@@ -56,7 +56,7 @@ yarn start
   - [x] ask
   - [x] show
   - [x] jobs
-- [ ] Deploy on [Netlify](https://netlify.com)
+- [x] Deploy on [Netlify](https://netlify.com)
 
 ## Author
 
