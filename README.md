@@ -1,5 +1,6 @@
 # hacker-news-react
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ea2b276a-a26d-4390-9e8c-a97e102d109b/deploy-status)](https://app.netlify.com/sites/hacker-news-react-js/deploys)
 [![Build Status](https://travis-ci.org/dj0nny/hacker-news-react.svg?branch=develop)](https://travis-ci.org/dj0nny/hacker-news-react)
 [![npm version](https://badge.fury.io/js/react.svg)](https://badge.fury.io/js/react)
 ![GitHub top language](https://img.shields.io/github/languages/top/dj0nny/hacker-news-react)
